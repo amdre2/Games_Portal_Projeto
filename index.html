@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portal de Jogos</title>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/button.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="content">
+      <div class="info">
+        <h2 id="game-title">Hollow Knight</h2>
+        <p id="game-description">
+          Explore um vasto mundo subterrâneo em um metroidvania desafiador e atmosférico.
+        </p>
+        <a id="steam-button" href="https://store.steampowered.com/app/367520/Hollow_Knight/" target="_blank">
+          <button class="steam-link">Ver na Steam</button>
+        </a>
+      </div>
+
+      <div class="trailer">
+        <video id="game-trailer" controls>
+          <source src="assets/trailers/Hollow Trailer.webm" type="video/mp4">
+          Seu navegador não suporta vídeo.
+        </video>
+      </div>
+
+      <div class="button-group">
+        <button class="game-btn" onclick="changeGame(0)" aria-label="Hollow Knight"></button>
+        <button class="game-btn" onclick="changeGame(1)" aria-label="Katana Zero"></button>
+        <button class="game-btn" onclick="changeGame(2)" aria-label="Celeste"></button>
+      </div>
+    </div>
+  </main>
+
+    <div id="background-overlay"></div>
+    <main class="container">
+        
+  <script src="js/main.js"></script>
+</body>
+</html
