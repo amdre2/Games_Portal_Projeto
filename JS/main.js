@@ -39,32 +39,32 @@ const games = [
     trailer.classList.add("fade");
     background.style.opacity = 0;
   
-    // Espera o fade-out (300ms) antes de trocar o conteúdo
+
     setTimeout(() => {
-      // Trocar conteúdo
+    
       title.textContent = game.title;
-      title.style.fontFamily = game.font; // Adicionado
+      title.style.fontFamily = game.font; 
       desc.textContent = game.description;
-      desc.style.fontFamily = game.font; // Adicionado
+      desc.style.fontFamily = game.font; 
       steam.href = game.steam;
       background.style.backgroundImage = `url('${game.image}')`;
   
-      // Importante: parar o vídeo e redefinir a source corretamente
+   
       trailer.pause();
-      trailer.removeAttribute("src"); // Para forçar recarregar
+      trailer.removeAttribute("src");
       trailer.load();
       trailer.setAttribute("src", game.video);
       trailer.load();
   
-      // Reaparecer com fade-in
+   
       title.classList.remove("fade");
       desc.classList.remove("fade");
       background.style.opacity = 1;
   
-      // Esperar um pouquinho mais pro vídeo aparecer suavemente
+
       setTimeout(() => {
         trailer.classList.remove("fade");
-      }, 100); // leve atraso pro trailer
+      }, 100); 
     }, 300);
   }
 
